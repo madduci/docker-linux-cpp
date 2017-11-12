@@ -1,0 +1,12 @@
+language: python
+python:
+  - 2.7
+
+services:
+  - docker
+
+install:
+  - docker build -t madduci/docker-linux-cpp:latest .
+
+script:
+  - docker images
