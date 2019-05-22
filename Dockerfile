@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-LABEL maintainer="info@micheleadduci.net"
+LABEL maintainer="Michele Adduci <adduci.michele@gmail.com>"
 
 WORKDIR /project
 
@@ -11,7 +11,7 @@ RUN echo "*** Installing gcc (4.9->8) ***" \
   && echo "deb http://ftp.us.debian.org/debian unstable main contrib non-free" >> /etc/apt/sources.list.d/unstable.list \
   && apt-get update \
   && apt-get install -y cmake \
-  && apt-get install -y g++-4.9 g++-6 g++-7 g++-8 \
+  && apt-get install -y g++-4.9 g++-6 g++-7 g++-8  \
   && apt-get autoremove --purge -y \
   && apt-get autoclean -y \
   && rm -rf /var/cache/apt/* /tmp/* \
