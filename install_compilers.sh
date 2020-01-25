@@ -5,15 +5,17 @@ readonly CLANG_PACKAGES="${2}"
 
 DEBIAN_FRONTEND=noninteractive 
 apt-get update 
+
+echo "Installing ${DEBIAN_PACKAGES}"
 apt-get install -y ${DEBIAN_PACKAGES}
 
 wget -O /tmp/llvm.sh https://apt.llvm.org/llvm.sh 
 chmod +x /tmp/llvm.sh 
 
-IFS=" " read -ra clang_versions <<< ${CLANG_PACKAGES}
-for i in "${clang_versions[@]}" ; 
+echo "Installing ${CLANG_PACKAGES}"
+for version in ${CLANG_PACKAGES}
 do 
-    sh /tmp/llvm.sh "$i" ; 
+   /tmp/llvm.sh $version
 done 
 
 apt-get autoremove --purge -y 
