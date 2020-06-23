@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/madduci/docker-linux-cpp.svg?branch=master)](https://travis-ci.org/madduci/docker-linux-cpp)
 
-A basic docker image for C++ developers, featuring g++ (from 7 up to 8) and clang (from 6 to 10). The default compiler is g++ 8, but you're free to modify the Dockerfile and set your own.
+A basic docker image for C++ developers, featuring g++ (from 8 to 10) and clang (from 9 to 10). The default compiler is g++9, but you're free to modify the Dockerfile and set your own.
 
 As default working directory, `/project` is being used, but feel free to change it.
 

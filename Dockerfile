@@ -1,11 +1,11 @@
-FROM debian:stable-slim
+FROM ubuntu:20.04
 
 LABEL maintainer="Michele Adduci <adduci.michele@gmail.com>"
 
 WORKDIR /project
 
-ARG DEB_COMPILERS="clang-6.0 clang-7 gcc-7 gcc-8"
-ARG EXTRA_CLANG_COMPILERS="8 9 10"
+ARG DEB_COMPILERS="g++-8 g++-9 g++-10"
+ARG EXTRA_CLANG_COMPILERS="9 10"
 
 RUN echo "Installing required packages " \
          && export DEBIAN_FRONTEND=noninteractive  \
@@ -26,4 +26,4 @@ RUN echo "Installing C++ Compilers" \
          && chmod +x /install_compilers.sh \
          && sh /install_compilers.sh "${DEB_COMPILERS}" "${EXTRA_CLANG_COMPILERS}"
 
-ENTRYPOINT [ "/usr/bin/g++" ]
+ENTRYPOINT [ "/usr/bin/g++-10" ]
