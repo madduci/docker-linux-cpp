@@ -1,11 +1,12 @@
 FROM ubuntu:20.04
 
-LABEL maintainer="Michele Adduci <adduci.michele@gmail.com>"
+LABEL maintainer="Michele Adduci <adduci@tutanota.com>" \
+      license="MIT"
 
 WORKDIR /project
 
 ARG DEB_COMPILERS="g++-8 g++-9 g++-10"
-ARG EXTRA_CLANG_COMPILERS="9 10"
+ARG EXTRA_CLANG_COMPILERS="9 10 11"
 
 RUN echo "Installing required packages " \
          && export DEBIAN_FRONTEND=noninteractive  \

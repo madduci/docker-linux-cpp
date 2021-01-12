@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 readonly DEBIAN_PACKAGES="${1}"
 readonly CLANG_PACKAGES="${2}"
