@@ -4,6 +4,7 @@ readonly DEBIAN_PACKAGES="${1}"
 readonly CLANG_PACKAGES="${2}"
 
 DEBIAN_FRONTEND=noninteractive
+add-apt-repository -y ppa:ubuntu-toolchain-r/test \
 apt-get update
 
 echo "Installing ${DEBIAN_PACKAGES}"
