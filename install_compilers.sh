@@ -7,7 +7,7 @@ DEBIAN_FRONTEND=noninteractive
 apt-get update
 
 echo "Installing ${DEBIAN_PACKAGES}"
-apt-get install -y ${DEBIAN_PACKAGES}
+apt-get install -y ${DEBIAN_PACKAGES} libstdc++6
 
 wget -O /tmp/llvm.sh https://apt.llvm.org/llvm.sh
 chmod +x /tmp/llvm.sh
