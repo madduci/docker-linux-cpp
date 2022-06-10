@@ -27,4 +27,4 @@ RUN echo "Installing C++ Compilers" \
          && chmod +x /install_compilers.sh \
          && sh /install_compilers.sh "${DEB_COMPILERS}" "${EXTRA_CLANG_COMPILERS}"
 
-ENTRYPOINT [ "/usr/bin/g++-10" ]
+ENTRYPOINT [ "/usr/bin/g++-11" ]
