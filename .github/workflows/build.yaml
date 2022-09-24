@@ -38,7 +38,7 @@ jobs:
           # Note: tags has to be all lower-case
           tags: |
             madduci/docker-linux-cpp:latest
-            madduci/docker-linux-cpp:1.8
+            madduci/docker-linux-cpp:1.9
           # build on feature branches, push only on master branch
           push: ${{ github.ref == 'refs/heads/master' }}
 
