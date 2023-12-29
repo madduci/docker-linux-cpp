@@ -5,7 +5,7 @@ LABEL maintainer="Michele Adduci <adduci@tutanota.com>" \
 
 WORKDIR /project
 
-ARG DEB_COMPILERS="g++-11 g++-12"
+ARG DEB_COMPILERS="g++-12 g++-13"
 ARG EXTRA_CLANG_COMPILERS="15 16"
 
 RUN echo "Installing required packages " \
@@ -27,4 +27,4 @@ RUN echo "Installing C++ Compilers" \
          && chmod +x /install_compilers.sh \
          && sh /install_compilers.sh "${DEB_COMPILERS}" "${EXTRA_CLANG_COMPILERS}"
 
-ENTRYPOINT [ "/usr/bin/g++-12" ]
+ENTRYPOINT [ "/usr/bin/g++-13" ]
