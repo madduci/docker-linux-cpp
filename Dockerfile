@@ -6,7 +6,7 @@ LABEL maintainer="Michele Adduci <adduci@tutanota.com>" \
 WORKDIR /project
 
 ARG DEB_COMPILERS="g++-12 g++-13 g++-14"
-ARG EXTRA_CLANG_COMPILERS="17 18 19"
+ARG EXTRA_CLANG_COMPILERS="18 19 20"
 
 RUN echo "Installing required packages " \
          && export DEBIAN_FRONTEND=noninteractive  \
