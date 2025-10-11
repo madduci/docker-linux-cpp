@@ -17,7 +17,7 @@ jobs:
     # steps to perform in job
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # setup Docker buld action
       - name: Set up Docker Buildx
@@ -38,7 +38,7 @@ jobs:
           # Note: tags has to be all lower-case
           tags: |
             madduci/docker-linux-cpp:latest
-            madduci/docker-linux-cpp:2.1
+            madduci/docker-linux-cpp:2.2
           # build on feature branches, push only on master branch
           push: ${{ github.ref == 'refs/heads/master' }}
 
